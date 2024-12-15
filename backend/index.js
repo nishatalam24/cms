@@ -8,9 +8,8 @@ connectToMongo();
 const port = 3000 || process.env.PORT;
 var cors = require("cors");
 
-app.use(cors({
-  origin: process.env.FRONTEND_API_LINK
-}));
+app.use(cors("*"));
+
 
 app.use(express.json()); //to convert request data to json
 
